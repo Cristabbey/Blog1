@@ -1,0 +1,80 @@
+[
+    {
+        "title": "Post 1",
+        "date": "2024-01-15",
+        "author": "Author One",
+        "excerpt": "This is the summary of post 1.",
+        "image": "./images/1.jpg"
+    },
+    {
+        "title": "Post 2",
+        "date": "2024-01-16",
+        "author": "Author Two",
+        "excerpt": "This is the summary of post 2.",
+        "image": "./images/2.jpg"
+    },
+    {
+        "title": "Post 3",
+        "date": "2024-01-17",
+        "author": "Author Three",
+        "excerpt": "This is the summary of post 3.",
+        "image": "./images/3.jpg"
+    },
+    {
+        "title": "Post 4",
+        "date": "2024-01-18",
+        "author": "Author Four",
+        "excerpt": "This is the summary of post 4.",
+        "image": "./images/4.jpg"
+    },
+    {
+        "title": "Post 5",
+        "date": "2024-01-19",
+        "author": "Author Five",
+        "excerpt": "This is the summary of post 5.",
+        "image": "./images/5.jpg"
+    },
+    {
+        "title": "Post 6",
+        "date": "2024-11-13",
+        "author": "Author MJ",
+        "excerpt": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+        "image": "./images/6.jpg"
+    },
+    {
+        "title": "Post 7",
+        "date": "2024-01-19",
+        "author": "Author Six",
+        "excerpt": "This is the summary of post 5.",
+        "image": "./images/7.jpg"
+    },
+    {
+        "title": "Post 8",
+        "date": "2024-01-19",
+        "author": "Author Seven",
+        "excerpt": "This is the summary of post 5.",
+        "image": "./images/8.jpg"
+    },
+    {
+    "title": "Post 8",
+    "date": "2024-01-19",
+    "author": "Author Eight",
+    "excerpt": "This is the summary of post 5.",
+    "image": "./images/9.jpg"
+    },
+    {
+        "title": "Post 9",
+        "date": "2024-01-19",
+        "author": "Author Nine",
+        "excerpt": "This is the summary of post 5.",
+        "image": "./images/0.jpg"
+    },
+    {
+        "title": "Post 10",
+        "date": "2024-01-19",
+        "author": "Author eleven",
+        "excerpt": "This is the summary of post 5.",
+        "image": "./images/11.jpg"
+    }
+
+]

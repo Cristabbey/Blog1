@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Blog</title>
+    <link rel="stylesheet" href="./fontawesome/all.min.css">
+    <link href="./bootstrap/boostrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyBlog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Articles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Article Header Section -->
+        <header class="article-header text-center text-light d-flex align-items-center">
+            <div class="container">
+                <h1>Article Title</h1>
+                <p class="lead">An in-depth look at this topic.</p>
+                <div class="author-info">
+                    <p>By <strong>Author Name</strong> | Published on <time datetime="2024-01-15">January 15, 2024</time></p>
+                </div>
+            </div>
+        </header>
+    
+        <!-- Article Content Section -->
+        <section class="container my-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <article class="article-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper, risus at auctor condimentum, est nisi finibus velit, eget volutpat risus odio non metus. Nulla facilisi. Sed et convallis eros.</p>
+                        <p>Vivamus eu sapien eget magna blandit cursus. Donec euismod tortor at lorem tincidunt, in vehicula magna tincidunt. Maecenas finibus nibh nec lectus tempus, vel ultrices erat fringilla. Phasellus dictum diam at urna sodales auctor.</p>
+                        
+                        <h2>Subheading</h2>
+                        <p>In ornare sit amet odio sit amet sollicitudin. Donec ullamcorper elit ac libero mollis, a tincidunt risus pharetra. Nulla ac felis sit amet justo consectetur consequat et sed nunc.</p>
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper, risus at auctor condimentum, est nisi finibus velit, eget volutpat risus odio non metus.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-light py-4">
+        <p>&copy; 2024 MyBlog. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+     <script src="./jquery.min.js"></script>
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    // Retrieve post data from localStorage
+    const postData = JSON.parse(localStorage.getItem("selectedPost"));
+
+    // Check if postData exists before rendering
+    if (postData) {
+        document.querySelector(".article-header h1").textContent = postData.title;
+        document.querySelector(".article-header .lead").textContent = postData.excerpt;
+        document.querySelector(".article-header .author-info").innerHTML = `By <strong>${postData.author}</strong> | Published on <time datetime="${postData.date}">${postData.date}</time>`;
+        
+        // Set article image in header (optional)
+        const headerElement = document.querySelector(".article-header");
+        headerElement.style.backgroundImage = `url('${postData.image}')`;
+        headerElement.style.backgroundSize = "cover";
+        headerElement.style.backgroundPosition = "center";
+
+        // Populate the article content (using placeholder content for now)
+        const articleContent = document.querySelector(".article-content");
+        articleContent.innerHTML = `
+            <p>${postData.excerpt}</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper, risus at auctor condimentum, est nisi finibus velit, eget volutpat risus odio non metus.</p>
+            <h2>Subheading</h2>
+            <p>Vivamus eu sapien eget magna blandit cursus. Donec euismod tortor at lorem tincidunt, in vehicula magna tincidunt.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        `;
+    } else {
+        document.querySelector(".article-content").innerHTML = "<p>Post data not found. Please return to the articles page and select a post to read.</p>";
+    }
+});
+
+    </script>
+</body>
+</html>

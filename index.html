@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Blog</title>
+    <link rel="stylesheet" href="./fontawesome/all.min.css">
+    <link href="./bootstrap/boostrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyBlog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Articles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center text-light d-flex align-items-center">
+        <div class="container">
+            <h1>Welcome to My Modern Blog</h1>
+            <p class="lead">Explore the latest articles and insights.</p>
+        </div>
+    </section>
+
+    <!-- Article List Section -->
+    <section class="container my-5">
+        <div class="row" id="articles-list">
+            <!-- Blog posts will be dynamically loaded here -->
+        </div>
+        <!-- Pagination Controls -->
+        <nav>
+            <ul class="pagination justify-content-center" id="pagination-controls">
+                <!-- Pagination links will be dynamically added here -->
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-light py-4">
+        <p>&copy; 2024 MyBlog. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+     <script src="./jquery.min.js"></script>
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
